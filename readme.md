@@ -1,6 +1,5 @@
 #### dsa
-dev setup
-  
+
     1.vim
     
     2.tmux
