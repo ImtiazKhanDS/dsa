@@ -13,7 +13,7 @@ class Solution:
             prefix_min[i] = min(prefix_min[i - 1], prices[i])
 
         suffix_max = [0] * n
-        suffix_max[n - 1] = prices[i]
+        suffix_max[n - 1] = prices[n - 1]
         for i in range(n - 2, 0, -1):
             suffix_max[i] = max(suffix_max[i + 1], prices[i])
 
