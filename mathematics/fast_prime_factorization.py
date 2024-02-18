@@ -17,10 +17,16 @@ class FastPrime:
                     j += 1
 
             i += 1
-        print(f"prime numbers : {self.prime}")
-        print(f"smallest prime factor : {self.spf}")
+
+    def print_prime_factorization(self, num):
+        while self.spf[num] != -1:
+            print(f"{self.spf[num]}*", end="")
+            num = num // self.spf[num]
+        if num != 1:
+            print(f"{num}")
 
 
 if __name__ == "__main__":
-    fp = FastPrime(10)
+    fp = FastPrime(10000)
     fp.populate_spf()
+    fp.print_prime_factorization(6060)
