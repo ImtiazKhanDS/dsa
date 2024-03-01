@@ -20,11 +20,11 @@ def count_pairs(arr: List, k: int) -> int:
         index = arr[i] % k
         freq[index] += 1
     ans = 0
-    ans += freq[0] * (freq[0] - 1) / 2
+    ans += int(freq[0] * (freq[0] - 1) / 2)
     for j in range(1, k // 2):
         ans += freq[j] * freq[k - j]
     if k % 2 == 0:
-        ans += freq[k // 2] * (freq[(k // 2)] - 1) / 2
+        ans += int(freq[k // 2] * (freq[(k // 2)] - 1) / 2)
     return int(ans)
 
 
