@@ -6,6 +6,9 @@
 #         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+
+        # By the time p2 travels to end p1 travels to l - nth node from beginning which
+        # is same as nth node from end
         p1 = head
         p2 = head
         while n > 0:
